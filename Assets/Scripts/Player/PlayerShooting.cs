@@ -30,9 +30,8 @@ public class PlayerShooting : MonoBehaviour
 
     void Update ()
     {
-        timer += Time.deltaTime;
-
-		if(Input.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0)
+        timer += Time.deltaTime;        gunAudio.Play();        Debug.Log(gunAudio.isPlaying);        Debug.Log(gunAudio.isActiveAndEnabled);
+        if (Input.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0)
         {
             Shoot ();
         }
